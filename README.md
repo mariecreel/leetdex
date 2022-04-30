@@ -1,5 +1,5 @@
 # leetdex
-CLI to fetch information from PokéDex. Built with node.js. Data retrieved from [PokéDex API](https://pokedevs.gitbook.io/pokedex/), written by [PokeDevs](https://github.com/PokeDevs).
+CLI to fetch information from PokéDex. Built with node.js. Data retrieved from [PokéDex API](https://pokedevs.gitbook.io/pokedex/), provided by [PokeDevs](https://github.com/PokeDevs).
 
 # Install
 - Clone this repository
