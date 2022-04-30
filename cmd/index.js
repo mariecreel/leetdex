@@ -7,7 +7,7 @@ const ua = `leetdex (https://github.com/mariecreel/leetdex, ${pj.version})`;
 
 const pkmn = async (pkmn) => {
   // strip leading zeros. some might try 001 for bulbasaur and get 404,
-  // which is annoying considering that's how the national number is 
+  // which is annoying considering that's how the national number is
   // written in the real pokedex
   pkmn = pkmn.replace(/^0+/, '');
   const response = await axios({
@@ -18,9 +18,11 @@ const pkmn = async (pkmn) => {
       'User-Agent': ua,
     },
   }).catch((error) => {
-    console.error(error);
+    throw new Error(error);
   });
-  console.log(JSON.stringify(response.data, null, 2));
+  return new Promise((resolve, reject) => {
+    resolve(response.data);
+  });
 };
 
 module.exports = {

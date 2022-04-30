@@ -22,7 +22,11 @@ const argv = yargs
 // only run commands if we aren't testing the validation above
 if (require.main === module) {
   if (typeof argv.pkmn !== 'undefined') {
-    pkmn(argv.pkmn);
+    let data = {};
+    (async () => {
+      data = await pkmn(argv.pkmn);
+      console.log(JSON.stringify(data, null, 2));
+    })();
   }
 }
 
