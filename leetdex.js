@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const yargs = require('yargs');
 const { pkmn } = require('./cmd/index');
 const argv = yargs

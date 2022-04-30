@@ -18,5 +18,8 @@
   "jest": {
     "verbose": true,
     "coveragePathIgnorePatterns": ["node_modules"]
-  }
+  },
+  "bin": {
+    "leetdex": "leetdex.js"
+  } 
 }
