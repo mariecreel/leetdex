@@ -12,6 +12,7 @@ const argv = yargs
     if (pkmn.match(/^[a-z0-9]+$/i)) {
       return true;
     }
+    // prevent pkmn from executing if invalid data is passed
     argv.pkmn = undefined;
     throw new Error(
       'pkmn accepts pokémon name (e.g., tsareena) or pokédex number (e.g., 763)'
@@ -21,7 +22,7 @@ const argv = yargs
 // only run commands if we aren't testing the validation above
 if (require.main === module) {
   if (typeof argv.pkmn !== 'undefined') {
-    console.log(pkmn(argv.pkmn));
+    pkmn(argv.pkmn);
   }
 }
 
