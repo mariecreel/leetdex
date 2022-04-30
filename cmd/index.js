@@ -6,8 +6,18 @@ const pj = require('../package.json');
 const ua = `leetdex (https://github.com/mariecreel/leetdex, ${pj.version})`;
 
 // commands
-const pkmn = (pkmn) => {
-  console.log(pkmn);
+const pkmn = async (pkmn) => {
+  const response = await axios({
+    method: 'get',
+    baseURL: baseURL,
+    url: `/v1/pokemon/${pkmn}`,
+    headers: {
+      'User-Agent': ua,
+    },
+  }).catch(error => {
+      console.error(error)
+  });
+  return(response.data);
 };
 
 module.exports = {
