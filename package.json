@@ -1,0 +1,10 @@
+{
+  "name": "leetdex",
+  "version": "1.0.0",
+  "description": "CLI to access pokedex information from pokedex API",
+  "main": "leetdex.js",
+  "repository": "git@github.com:mariecreel/leetdex.git",
+  "author": "mariecreel <nick.creel@protonmail.com>",
+  "license": "MIT",
+  "private": false
+}
