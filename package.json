@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "description": "CLI to access pokedex information from pokedex API",
   "main": "leetdex.js",
+  "scripts": {
+    "test": "yarn jest"
+  },
   "repository": "git@github.com:mariecreel/leetdex.git",
   "author": "mariecreel <nick.creel@protonmail.com>",
   "license": "MIT",
   "private": false,
   "dependencies": {
     "axios": "^0.27.2",
+    "jest": "^28.0.3",
     "yargs": "^17.4.1"
+  },
+  "jest": {
+    "verbose": true,
+    "coveragePathIgnorePatterns": ["node_modules"]
   }
 }
