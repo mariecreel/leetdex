@@ -19,11 +19,13 @@ describe('cli', () => {
   it('pkmn should accept chars', async () => {
     await runCommand('--pkmn', 'tsareena');
     expect(consoleLogSpy).toBeCalledTimes(1);
+    expect(consoleLogSpy).toHaveBeenCalledWith('tsareena');
     expect(consoleErrorSpy).not.toBeCalled();
   });
   it('pkmn should accept ints', async () => {
     await runCommand('--pkmn', '001');
     expect(consoleLogSpy).toBeCalledTimes(1);
+    expect(consoleLogSpy).toHaveBeenCalledWith('001');
     expect(consoleErrorSpy).not.toBeCalled();
   });
   it('pkmn should not accept special characters', async () => {
