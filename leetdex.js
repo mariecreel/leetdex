@@ -3,7 +3,6 @@ const { pkmn } = require('./cmd/index')
 const argv = yargs
     .option('pkmn', {
         alias: 'p',
-        default: 'pikachu',
         describe: 'request information about specific pokémon using pokémon name or pokédex number',
         type: 'string'
     })
