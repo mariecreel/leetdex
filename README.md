@@ -20,7 +20,7 @@ Options:
 
 ## Request more information about a Pokémon by name:
 ```
-$ node leetdex.js -p buneary
+$ leetdex -p buneary
 [
   {
     "number": "427",
@@ -70,7 +70,7 @@ $ node leetdex.js -p buneary
 
 ## Request information for a pokemon by national Pokédex number:
 ```
-$ node leetdex.js --pkmn 1
+$ leetdex --pkmn 1
 [
   {
     "number": "1",
@@ -121,7 +121,7 @@ $ node leetdex.js --pkmn 1
 
 You can also use leading zeros, which would typically return 404 response from the Pokédex API:
 ```
-$ node leetdex.js --pkmn 001
+$ leetdex --pkmn 001
 [
   {
     "number": "1",
